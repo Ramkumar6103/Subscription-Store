@@ -28,16 +28,19 @@ $subs = $stmt->get_result();
         <h3>Your Subscriptions</h3>
         <table>
             <tr><th>Product</th><th>Start</th><th>End</th><th>Status</th></tr>
-            <?php while($row = $subs->fetch_assoc()): ?>
+            <?php if ($subs->num_rows > 0):
+                while($row = $subs->fetch_assoc()): ?>
                 <tr>
                     <td><?= htmlspecialchars($row['title']) ?></td>
                     <td><?= $row['start_date'] ?></td>
                     <td><?= $row['end_date'] ?></td>
                     <td><?= ucfirst($row['status']) ?></td>
                 </tr>
-            <?php endwhile; ?>
+            <?php endwhile;
+            else: ?>
+                <tr><td colspan="4"><a href="../index.php">Subscribe to more products</a></td></tr>
+            <?php endif; ?>
         </table>
-        <a href="../index.php">Subscribe to more products</a>
     </div>
 </body>
 </html> 

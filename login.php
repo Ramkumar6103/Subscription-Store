@@ -14,7 +14,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['user_id'] = $row['id'];
             $_SESSION['role'] = $row['role'];
             $_SESSION['name'] = $row['name'];
-            header("Location: user/dashboard.php");
+            if ($row['role'] === 'admin') {
+                header("Location: admin/dashboard.php");
+            } else {
+                header("Location: user/dashboard.php");
+            }
             exit;
         }
     }
@@ -26,6 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <h2>Login</h2>
