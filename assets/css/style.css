@@ -1,0 +1,18 @@
+body { font-family: Arial, sans-serif; background: #f7f7f7; margin: 0; padding: 0; }
+h1, h2 { color: #333; }
+nav, .navbar { background: #222; color: #fff; padding: 1em; }
+nav a, .navbar a { color: #fff; margin-right: 1em; text-decoration: none; }
+.products { display: flex; flex-wrap: wrap; gap: 2em; }
+.product-card { background: #fff; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 8px #0001; padding: 1em; width: 250px; }
+.product-card h3 { margin-top: 0; }
+.product-card a { display: inline-block; margin-top: 1em; background: #007bff; color: #fff; padding: 0.5em 1em; border-radius: 4px; text-decoration: none; }
+.product-card a:hover { background: #0056b3; }
+form { background: #fff; padding: 2em; border-radius: 8px; box-shadow: 0 2px 8px #0001; max-width: 350px; margin: 2em auto; }
+form input, form button { width: 100%; padding: 0.7em; margin-bottom: 1em; border: 1px solid #ccc; border-radius: 4px; }
+form button { background: #007bff; color: #fff; border: none; cursor: pointer; }
+form button:hover { background: #0056b3; }
+.dashboard, .admin-panel { max-width: 900px; margin: 2em auto; background: #fff; padding: 2em; border-radius: 8px; box-shadow: 0 2px 8px #0001; }
+table { width: 100%; border-collapse: collapse; margin-top: 1em; }
+table, th, td { border: 1px solid #ddd; }
+th, td { padding: 0.7em; text-align: left; }
+th { background: #f0f0f0; } 
